@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="custom-card" *ngFor="let card of cards">
+        <div class="img-box">
+            <img [src]="card.imageUrl">
+        </div>
+        <div class="custom-content">
+            <h2>{{card.title}}</h2>
+            <p>{{card.Artista}}</p>
+            <a [href]="card.link">Read More</a>
+        </div>
+    </div>
+</div>
