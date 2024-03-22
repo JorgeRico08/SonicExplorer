@@ -1,0 +1,14 @@
+
+.imagen_carr {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.carousel{
+    text-align: center;
+    background-color: #1a735f;
+    border-radius: 40px;
+}

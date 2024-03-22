@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TopComponent } from './pages/top/top.component';
 import { ImganesMusicComponent } from './pages/imganes-music/imganes-music.component';
+import { VideoMusicalesComponent } from './pages/video-musicales/video-musicales.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ImganesMusicComponent } from './pages/imganes-music/imganes-music.compo
     FooterComponent,
     HomeComponent,
     TopComponent,
-    ImganesMusicComponent
+    ImganesMusicComponent,
+    VideoMusicalesComponent
   ],
   imports: [
     BrowserModule,

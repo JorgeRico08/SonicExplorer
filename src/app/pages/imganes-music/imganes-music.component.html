@@ -5,8 +5,11 @@
         </div>
         <div class="custom-content">
             <h2>{{card.title}}</h2>
-            <p>{{card.Artista}}</p>
-            <a [href]="card.link">Read More</a>
+            <hr>
+            <p>Interpretada por: <strong>{{card.Artista}}</strong></p>
+            <p>Escrita por: <strong>{{card.escritor}}</strong></p>
+            <p>Producida por: <strong>{{card.productor}}</strong></p>
+            <a [href]="card.link" target="_blank">Escuchar cancion</a>
         </div>
     </div>
 </div>

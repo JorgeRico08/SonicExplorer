@@ -35,10 +35,11 @@ body {
     border-radius: 20px;
     transition: 0.5s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container .custom-card:hover {
-    height: 400px;
+    height: 500px;
 }
 
 .container .custom-card .img-box {
@@ -79,7 +80,7 @@ body {
 
 .container .custom-card:hover .custom-content {
     top: 130px;
-    height: 250px;
+    height: 450px;
 }
 
 .container.custom-card .custom-content h2 {
@@ -92,21 +93,24 @@ body {
     color: #333;
 }
 .container .custom-card .custom-content a {
-    position: relative;
-    top: 15px;
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    background: #181818;
-    color: #fff;
+    font-family: "Jost", sans-serif;
     font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #000000;
 }
 
 .container .custom-card .custom-content a:hover {
     opacity: 0.8;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .container .custom-card { 
         width: 230px;
         border-radius: 15px;
