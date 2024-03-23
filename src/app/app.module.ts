@@ -9,6 +9,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { TopComponent } from './pages/top/top.component';
 import { ImganesMusicComponent } from './pages/imganes-music/imganes-music.component';
 import { VideoMusicalesComponent } from './pages/video-musicales/video-musicales.component';
+import { RegistroComponent } from './pages/auth/registro/registro.component';
+import { LogeoUserComponent } from './pages/auth/logeo-user/logeo-user.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,16 @@ import { VideoMusicalesComponent } from './pages/video-musicales/video-musicales
     HomeComponent,
     TopComponent,
     ImganesMusicComponent,
-    VideoMusicalesComponent
+    VideoMusicalesComponent,
+    RegistroComponent,
+    LogeoUserComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

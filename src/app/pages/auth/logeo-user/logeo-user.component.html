@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 10rem;">
+    <div class="card">
+      <div class="card-header">
+        LOGIN
+      </div>
+      <div class="container">
+        <form [formGroup]="userForm" (submit)="logIn()">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username" class="form-control" formControlName="username">
+            <div *ngIf="userForm.get('username')?.errors && userForm.get('username')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('username')?.hasError('required')">El nombre de usuario es obligatorio.</div>
+              <div *ngIf="userForm.get('username')?.hasError('minlength')">El nombre de usuario debe tener al menos 5 caracteres.</div>
+              <div *ngIf="userForm.get('username')?.hasError('maxlength')">El nombre de usuario debe tener máximo 20 caracteres.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" formControlName="password">
+            <div *ngIf="userForm.get('password')?.errors && userForm.get('password')?.touched" class="text-danger">
+              <div *ngIf="userForm.get('password')?.hasError('required')">La contraseña es obligatoria.</div>
+              <div *ngIf="userForm.get('password')?.hasError('minlength')">La contraseña debe tener al menos 5 caracteres.</div>
+              <div *ngIf="userForm.get('password')?.hasError('maxlength')">La contraseña debe tener máximo 20 caracteres.</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Ingresar</button>
+        </form>
+        <div style="text-align: center;" >
+            <a class="btn btn-warning" (click)="registro()"> Si eres nuevo registrate</a>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br>

@@ -4,7 +4,7 @@
       <!-- Left elements -->
       <div class="d-flex">
         <!-- Brand -->
-        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+        <a *ngIf="token == null" class="navbar-brand me-2 mb-1 d-flex align-items-center" routerLink="/">
           <img
             src="https://th.bing.com/th/id/OIG2.RFY8Bkk4G6ez9tCwlnhK?pid=ImgGn"
             height="50"
@@ -13,28 +13,44 @@
             style="margin-top: 2px;"
           />
         </a>
-
+        <a *ngIf="token !== null" class="navbar-brand me-2 mb-1 d-flex align-items-center" routerLink="home">
+          <img
+            src="https://th.bing.com/th/id/OIG2.RFY8Bkk4G6ez9tCwlnhK?pid=ImgGn"
+            height="50"
+            alt=""
+            loading="lazy"
+            style="margin-top: 2px;"
+          />
+        </a>
       </div>
   
       <!-- Right elements -->
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" routerLink="/" routerLinkActive="active">
+      <ul  class="navbar-nav flex-row">
+        <li *ngIf="token !== null"class="nav-item me-3 me-lg-1">
+            <a class="nav-link" routerLink="home" routerLinkActive="active">
               <span><i class="fas fa-home fa-lg"></i></span>
             </a>
           </li>
     
-          <li class="nav-item me-3 me-lg-1">
+          <li *ngIf="token !== null" class="nav-item me-3 me-lg-1">
             <a class="nav-link" routerLink="top" routerLinkActive="active">
               <span><i class="fas fa-music fa-lg"></i></span>
             </a>
           </li>
           
-          <li class="nav-item me-3 me-lg-1">
+          <li *ngIf="token !== null" class="nav-item me-3 me-lg-1">
             <a class="nav-link" routerLink="video" routerLinkActive="active">
               <span><i class="fas fa-video fa-lg"></i></span>
             </a>
           </li>
+          
+          <li *ngIf="token !== null" class="nav-item me-3 me-lg-1">
+            <a class="nav-link" href="/login" (click)="cerrarsesion()" routerLinkActive="active">
+              <span><i class="fas fa-sign-out fa-lg"></i></span>
+            </a>
+          </li>
+
+          
       </ul>
       <!-- Right elements -->
     </div>
